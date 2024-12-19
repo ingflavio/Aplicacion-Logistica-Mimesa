@@ -1,0 +1,49 @@
+azul : #1c3c6b , rgb(28,60,107)
+verde: #94cc1c , rgb(148,204,28)
+verde2: #04943b, rgb(4,148,59)
+
+
+
+1289x1039
+
+
+
+QTableWidget {
+    background-color: transparent
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    color: #000000;
+}
+
+QHeaderView::section {
+    background-color: #1c3c6b; /* Azul */
+    color: #ffffff;
+    padding: 4px;
+    border: 1px solid #aaa;
+    font-weight: bold;
+}
+
+QTableWidget::item {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+
+QTableWidget::item:selected {
+    background-color: #94cc1c; /* Verde */
+    color: #ffffff;
+}
+
+QScrollBar:vertical {
+    border: 1px solid #999999;
+    background: #f0f0f0;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #04943b; /* Verde2 */
+    min-height: 20px;
+}

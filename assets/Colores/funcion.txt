@@ -1,0 +1,42 @@
+ """def calculo_Manuel(self): 
+        
+        selected_localidad = self.localidades_combobox.currentText()
+        selected_categoria = self.categorias_combobox.currentText()
+
+        filtered_df = self.df.copy()
+
+        if selected_localidad:
+            filtered_df = filtered_df[filtered_df['Localidad'] == selected_localidad]
+        if selected_categoria:
+            filtered_df = filtered_df[filtered_df['Categoria'] == selected_categoria]
+        
+        filas= filtered_df.shape[0]
+        
+        for i in range(filas):
+            fila = filtered_df.iloc[i]
+            transit_tm =  fila['Tránsito TM']
+            planned_tm =  fila['Planificado TM']
+            inv_exist_tm =  fila['Inv Exist TM']
+            target_inv =  fila['Target de Inventario']
+            paletas_inv =  fila['Paletas']
+            paletas_agregadas = fila["Paleta Adicional"]
+            porcentaje_agregado = fila["% Adicional"]
+            nuevo_porcentajeAgregado = ((transit_tm + planned_tm + inv_exist_tm + paletas_inv + paletas_agregadas) / target_inv) * 100
+            invfinal = paletas_inv + inv_exist_tm + paletas_agregadas    
+            filtered_df.at[i, '% Adicional'] = nuevo_porcentajeAgregado
+            filtered_df.at[i, 'Paleta Adicional'] = invfinal
+
+            
+            
+        self.table.setRowCount(filtered_df.shape[0])
+        for row_idx, (_, row) in enumerate(filtered_df.iterrows()):
+            for col_idx, col in enumerate(self.columns_to_display):
+                value = row[col]
+           
+                if col in ['% Adicional']:
+                    value = self.porcentaje_a_float(value)
+                    value = round(value, 2)
+                    value = f"{value:.2f}%" 
+                item = QTableWidgetItem(str(value))
+                self.table.setItem(row_idx, col_idx, item)"""
+            

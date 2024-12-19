@@ -1,0 +1,14 @@
+# Archivos temporales de Python
+*.pyc
+__pycache__/
+
+# Entornos virtuales
+env/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos grandes específicos
+env/Lib/site-packages/PySide6/Qt6WebEngineCore.dll
